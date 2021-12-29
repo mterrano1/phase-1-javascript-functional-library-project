@@ -41,17 +41,16 @@ function myFirst(array, n){
     }
 }
 
-function myLast(array, n){
-    let newArray = [];
-    if (n){
-        for (let i = 0; i < n; i++){
-            newArray.push(array.pop())
-        }
-        return newArray
-    }
-    else 
-    {
-        return (array.pop())
-    }
+function myLast(array, n = 1){
+    let index = array.length - n;
+
+    return n > 1 ? array.slice(index, array.length) : array[index]
 }
 
+function myKeys(object){
+    return Object.keys(object)
+}
+
+function myValues(object){
+    return Object.values(object)
+}
